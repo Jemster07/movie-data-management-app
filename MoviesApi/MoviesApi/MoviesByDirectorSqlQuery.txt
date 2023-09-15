@@ -1,0 +1,3 @@
+﻿SELECT Name AS 'Movie Title', [Release Year], LastName, BirthYear FROM MotionPictures
+LEFT JOIN MotionPictureDirectors ON MotionPictures.DirectorId = MotionPictureDirectors.DirectorId
+WHERE AcademyAward = 0 OR (MotionPictures.DirectorId IS NULL AND AcademyAward = 0);
